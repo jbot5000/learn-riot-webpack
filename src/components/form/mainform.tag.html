@@ -1,17 +1,4 @@
 <mainform>
-    <textboxfield
-        name="first_name"
-        label="First Name"
-        error="Please enter something."
-        value="Jbot"
-    >
-    </textboxfield>
-    <checkboxfield
-        name="has_middle_name"
-        label="Has Middle Name"
-        checked="true"
-    >
-    </checkboxfield>
     <style>
         mainform {
             display: block;
@@ -21,4 +8,44 @@
             display: block;
         }
     </style>
+
+    <textboxfield
+        ref="first_name"
+        label="First Name"
+        error="Please enter something."
+        value="Jbot"
+    >
+    </textboxfield>
+    <textboxfield
+        ref="last_name"
+        label="Last Name"
+        error="Please enter something."
+        value="Porkins"
+    >
+    </textboxfield>
+    <checkboxfield
+        ref="has_middle_name"
+        label="Has Middle Name"
+        checked="{ true }"
+    >
+    </checkboxfield>
+    <textboxfield
+        ref="middle_name"
+        label="Middle Name"
+        error="Please enter something."
+        value="Squeedley Squooch"
+    >
+    </textboxfield>
+    
+    <script>
+        var tag = this;
+        tag.on('mount', () => {
+            
+            tag.refs.has_middle_name.on('update', (e) => {
+                tag.refs.middle_name.update({ hide: !this.checked });
+            });
+        });      
+        
+    </script>
+
 </mainform>

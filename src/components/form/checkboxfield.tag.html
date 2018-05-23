@@ -5,6 +5,7 @@
             name="{ name }"
             value=""
             checked="{ checked }"
+            onchange="{ valueChanged }"
         >
         { label }
     </label>
@@ -15,6 +16,10 @@
         tag.name = opts.name || '';
         tag.label = opts.label || '';
         tag.checked = opts.checked || '';
+
+        this.valueChanged = (e) => {
+            this.checked = e.target.checked;
+        }
 
     </script>
 </checkboxfield>
