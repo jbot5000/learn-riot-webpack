@@ -1,0 +1,22 @@
+<textboxfield>
+
+    <label>
+        { label }
+        <input
+            type="text"
+            name="{ name }"
+            value="{ value }"
+        >
+    </label>
+    <error if="{ error.length > 0 }" message="{ error }"></error>
+
+    <script>
+        var tag = this;
+        
+        tag.name = opts.name || '';
+        tag.label = opts.label || '';
+        tag.error = opts.error || '';
+        tag.value = opts.value || '';
+
+    </script>
+</textboxfield>

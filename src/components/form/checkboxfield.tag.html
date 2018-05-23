@@ -1,0 +1,20 @@
+<checkboxfield>
+    <label>
+        <input
+            type="checkbox"
+            name="{ name }"
+            value=""
+            checked="{ checked }"
+        >
+        { label }
+    </label>
+
+    <script>
+        var tag = this;
+        
+        tag.name = opts.name || '';
+        tag.label = opts.label || '';
+        tag.checked = opts.checked || '';
+
+    </script>
+</checkboxfield>

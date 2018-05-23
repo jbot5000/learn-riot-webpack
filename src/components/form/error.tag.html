@@ -1,0 +1,20 @@
+<error>
+    <style>
+        error p {
+            color: darkred;
+            font-weight: bold;
+            border: 1px solid currentColor;
+            border-radius: 2px;
+            padding: 1em;
+            margin: 0.5em 0;
+        }
+    </style>
+
+    <p>{ message }</p>
+
+    <script>
+        var tag = this;
+
+        tag.message = opts.message || '';
+    </script>
+</error>

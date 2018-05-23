@@ -22,13 +22,13 @@ module.exports = {
         rules: [
             {
                 enforce: 'pre',
-                test: /\.tag$/,
+                test: /\.tag.html$/,
                 exclude: /node_modules/,
                 loader: 'customized-riotjs-loader',
                 query: { type: 'none' }
             },
             {
-                test: /\.js$|\.tag$/,
+                test: /\.js$|\.tag.html$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: { presets: ['es2015'] }
