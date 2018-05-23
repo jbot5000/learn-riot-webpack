@@ -12,15 +12,16 @@
     <div id="app">
         <h1>Look, Dumb Components</h1>
         <s-input value="hello"></s-input>
-        <s-select values="{ valuesList }"></s-select>
+        <select-and-say values="{ valuesList }"></select-and-say>
     </div>
     
     <script>
-        var valuesList = {
-            '1': 'poop',
-            '2': 'bloop',
-            '3': 'whoop',
-        };
+        valuesList = [
+            {value: '', label: 'Select something!'},
+            {value: '1', label: 'poop'},
+            {value: '2', label: 'bloop'},
+            {value: '3', label: 'whoop'},
+        ]
     </script>
 </body>
 </html>
